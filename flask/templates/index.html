@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planilhas de pendências - Identificação e Avaliação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planilhas de pendências - Identificação e Avaliação</h1>
+    <h3>Gere um relatório no Astrum no formato .CSV com os campos: Situação do documento, Macroprocesso, Tipo documental, ID, Operador identificação, Operador avaliação e unidade do operador</h3>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Gerar Planilha">
+    </form>
+    <footer style="text-align: center; padding: 10px; background-color: #007BFF; color: #fff;">
+        V. 0.1 by Patrick Ribeiro
+    </footer>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planilhas de pendências - Identificação e Avaliação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+		
+		h2 {
+            text-align: center;
+            padding: 10px;
+        }
+		
+        h3 {
+            text-align: center;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para palavras em vermelho */
+        .green-text {
+            color: LightGreen;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            padding: 2px;
+        }
+		/* Estilo para palavras em vermelho */
+        .red-text {
+            color: coral;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planilhas de pendências - Identificação e Avaliação</h1>
+    <h3>Gere um relatório no Astrum no formato .CSV com os campos: <span class="green-text">Situação do documento</span>, <span class="green-text">Macroprocesso (podem ser vários)</span>,<span class="green-text">Processo</span>, <span class="green-text">Subprocesso</span>, <span class="green-text">Tipo documental</span>, <span class="green-text">ID</span>, <span class="green-text">Operador identificação</span>, <span class="green-text">Operador avaliação</span> e <span class="green-text">unidade do operador</span>. <p><span class="red-text">ATENÇÃO: os campos precisam seguir ESPECIFICAMENTE a ordem acima!!</span></p></h3>
+	
+	
+	<h2>Planilha de Pendências</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Gerar Planilha de pendências">
+    </form>
+	
+	<h2>Planilha de Links</h2>
+    <form method="post" action="/gerar_links" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Gerar planilha de links">
+    </form>
+    <footer style="text-align: center; padding: 10px; background-color: #007BFF; color: #fff;">
+        V. 0.7 by Patrick Ribeiro - 23-01-2024
+    </footer>
+</body>
+</html>
